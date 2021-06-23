@@ -18,7 +18,7 @@ class Home extends Component {
                                   A few fun facts about myself
                                 </h3>
                                 <div class="excerpt" style={{fontSize:'22px'}}>
-                                <p>I'm addicted to coffee, I have a weird combination of pets: golden retriever, and a french bulldog named Byte and Toña, I love elephants. I do crossfit, I am passionate to computer science, I like travel, and eat weird stuff.</p>
+                                <p>One thing I cannot live without is coffee, I have a golden retriever, his name is Byte, I love elephants. I do crossfit, I am passionate to computer science, I like travel, and eat weird stuff.</p>
                                 <br/>
                                 <div><strong>Read more about me </strong><Link to="/about" class="read-more"></Link></div>
                                 </div>
