@@ -1,0 +1,59 @@
+ENIO MAIALE Senior Director Software Engineering at Miami HEAT Pompano
+Beach, Florida, United States
+
+Contact: enio.maiale@gmail.com LinkedIn: www.linkedin.com/in/eniomaiale
+
+SUMMARY Diligent Software Development Director with expertise in
+managing high performing teams and long-term releases using Agile
+framework processes. Skilled in product development, release planning,
+change management and product strategy.
+
+Ability to identify and groom team members to perform at their highest
+potential, demonstrating critical thinking in design and debugging while
+ensuring dedication to quality.
+
+Background in application development, testing and optimization,
+including coordinating ground-up planning, programming and
+implementation for core modules.
+
+EXPERIENCE
+
+Miami HEAT Senior Director of Software Engineering November 2021 –
+Present
+
+Director Software Engineering October 2018 – November 2021
+
+-   Built and scaled engineering team and implemented Agile framework.
+-   Managed engineering team and offshore vendors.
+-   Mentored engineers and engineering managers.
+-   Reduced bugs by 70% and improved reliability to 92%.
+-   Generated $500K additional sales through application optimization.
+-   Architected performance tools for basketball operations.
+
+601 Analytics Software Engineering Consultant January 2020 – Present
+
+Phunware, Inc. Senior Software Engineer December 2016 – October 2018
+
+-   Developed React and C# applications.
+-   Designed CI/CD pipelines using Jenkins.
+-   Coordinated deployments.
+
+Miami Insurance Brokers IT Manager March 2008 – October 2013
+
+-   Built insurance web applications.
+-   Integrated CRM and payment systems.
+
+EDUCATION
+
+Florida International University Master’s Degree, Computer Science 2023
+– 2025
+
+Universidad Nueva Esparta Bachelor of Computer Science 2000 – 2005
+
+SKILLS
+
+C# SQL Server React Agile Azure Software Architecture
+
+LANGUAGES
+
+Spanish — Native English — Professional
