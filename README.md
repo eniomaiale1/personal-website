@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Enio Maiale — Personal Website
 
-## Available Scripts
+Personal website of [Enio Maiale](https://www.linkedin.com/in/eniomaiale), Senior Director of Software Engineering at the Miami HEAT.
 
-In the project directory, you can run:
+## Stack
 
-### `npm start`
+- **Framework** — [Next.js 14](https://nextjs.org) (App Router)
+- **Language** — TypeScript
+- **Styling** — [Tailwind CSS 3](https://tailwindcss.com)
+- **Animations** — [Framer Motion 11](https://www.framer.com/motion)
+- **Deployment** — Azure App Service (Linux, Node 20 LTS) via Azure Pipelines
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Structure
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```
+├── app/
+│   ├── globals.css       # Tailwind base, component classes, custom styles
+│   ├── layout.tsx        # Root layout + metadata
+│   └── page.tsx          # Home page (composes all sections)
+├── components/
+│   ├── Navbar.tsx        # Fixed navbar with scroll detection + mobile menu
+│   ├── Hero.tsx          # Full-screen hero with typewriter effect
+│   ├── About.tsx         # Summary + key metrics grid
+│   ├── Experience.tsx    # Animated timeline
+│   ├── Skills.tsx        # Skill tags grouped by category
+│   ├── Education.tsx     # Education cards
+│   ├── Contact.tsx       # Email + LinkedIn contact links
+│   └── Footer.tsx        # Footer
+├── hooks/
+│   └── useTypewriter.ts  # Typewriter animation hook
+├── lib/
+│   └── data.ts           # All resume/profile content (single source of truth)
+├── next.config.js
+├── tailwind.config.ts
+├── tsconfig.json
+└── azure-pipelines.yml   # CI/CD pipeline for Azure App Service
+```
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+npm install
 
-### `npm run build`
+# Start development server
+npm run dev
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
 
-### `npm run eject`
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The project is deployed automatically to **Azure App Service** (`personal-website-fe`) via Azure Pipelines on every push to `master`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The pipeline:
+1. Installs Node 20 on the build agent
+2. Runs `npm ci` and `npm run build`
+3. Prunes dev dependencies
+4. Packages and uploads the artifact
+5. Deploys to Azure App Service with `npm run start` as the startup command
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Updating Content
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+All profile content lives in a single file: `lib/data.ts`.  
+Edit that file to update experience, skills, education, or contact details — no component changes needed.
